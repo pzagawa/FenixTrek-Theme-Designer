@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>FenixTrek Theme Designer</title>
+        <meta name="author" content="Piotr Zagawa 2024" />
+        <meta name="description" content="FenixTrek Theme Designer" />
+        <meta name="keywords" content="garmin,fenixtrek,watchface,connectiq,theme,designer,colors" />
+        <link rel="icon" href="favicon.png" sizes="32x32" type="image/png" />
+        <link rel="stylesheet" href="designer.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <script src="code/utils.js"></script>
+    <script src="code/colors.js"></script>
+    <script src="code/elements.js"></script>
+    <script src="code/watchface.js"></script>
+    <script src="code/designer.js"></script>
+    <body>
+        <header>
+            <table id="banner">
+                <tbody>
+                    <tr>
+                    <td class="banner_left">
+                        <img src="gfx/website_banner.png" alt="FenixTrek"/>
+                    </td>
+                    <td class="banner_right">
+                        <h2 class="box inner_shadow"><a href="../index.html">FenixTrek</a></h2>
+                        <h1 class="box inner_shadow"><a href="../index.html">Theme Designer</a></h1>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+        <main role="main">
+            <div class="center">
+                <table>
+                <tbody>
+
+                <!-- First row -->
+                <tr>
+                <td id="TD_Watchface">
+                    <p id="PreviewTitle">Preview</p>
+                    <div id="Watchface">
+
+                        <!-- SVG WATCHFACE -->
+                        <svg id="svgWF" onload="init(evt)" width="100%" height="100%" viewBox="0 0 260 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                            <defs>
+                                <filter id="watchface_shadow">
+                                    <feDropShadow dx="0" dy="0" stdDeviation="5" flood-opacity="0.5"/>
+                                </filter>
+                            </defs>
+                            <g id="Background" transform="matrix(0.757225,0,0,1.32995,56.5491,-47.5482)">
+                                <rect x="-76" y="35" width="346" height="197" style="fill:white;" />
+                            </g>
+                            <g id="GROUP-BottomBar" serif:id="GROUP BottomBar">
+                                <g id="BottomBarOutline" transform="matrix(0.988593,0,0,0.875,3.95437,28.125)">
+                                    <path d="M202.354,209L53.658,209L4.092,265L251.919,265L202.354,209Z" style="fill:rgb(0,201,101);" />
+                                </g>
+                                <g id="BottomBar" transform="matrix(0.988593,0,0,0.875,3.95437,28.125)">
+                                    <path d="M201.342,211.286L54.669,211.286L7.127,265L248.885,265L201.342,211.286Z" style="fill:rgb(0,164,59);"/>
+                                </g>
+                                <g id="SymbolCONNOn" transform="matrix(1.26667,0,0,1.33332,-34.6667,-85.6621)">
+                                    <rect x="115" y="251" width="30" height="6"/>
+                                </g>
+                                <path id="SymbolCONNBackground" d="M130,245L150,245L165,260L130,260L130,245Z" style="fill:rgb(0,97,68);"/>
+                                <rect id="SymbolCONNOff" x="130" y="249" width="19" height="8" style="fill:white;"/>
+                                <path id="BottomBarText" d="M176,232L79,232L79,242L176,242L176,232ZM176,219L146,219L146,229L176,229L176,219Z" style="fill:white;"/>
+                                <rect id="BottomBarNotif" x="180" y="217" width="20" height="16" style="fill:rgb(91,45,0);"/>
+                                <rect id="ProgressBar" x="60" y="219" width="71" height="10" style="fill:rgb(83,37,0);"/>
+                                <rect id="ProgressBarSegment" x="61" y="220" width="40" height="8" style="fill:rgb(255,229,0);"/>
+                            </g>
+
+                            <path id="SummaryText" d="M124,186L67,186L67,205L124,205L124,186ZM200,186L136,186L136,205L200,205L200,186Z" style="fill:rgb(230,74,0);"/>
+                            <path id="LevelBarText" d="M57,186L24,186L24,196L57,196L57,186ZM237,186L204,186L204,196L237,196L237,186Z" style="fill:rgb(230,134,0);"/>
+                            <path id="LevelBar" d="M251.584,77L240.534,77C248.425,92.986 252.86,110.979 252.86,130C252.86,150.22 247.848,169.279 239,186L250.195,186C258.313,169.04 262.86,150.047 262.86,130C262.86,111.128 258.83,93.19 251.584,77ZM19.326,77C11.435,92.986 7,110.979 7,130C7,150.22 12.012,169.279 20.86,186L9.665,186C1.547,169.04 -3,150.047 -3,130C-3,111.128 1.03,93.19 8.276,77L19.326,77Z" style="fill:rgb(0,55,143);"/>
+                            <path id="TimeSymbol" d="M239,162L224,162L224,172L239,172L239,162ZM30,130L17,130L17,140L30,140L30,130ZM245,123L230,123L230,133L245,133L245,123ZM30,116L17,116L17,126L30,126L30,116Z"/>
+                            <path id="TimeDigits" d="M128.651,88L86.651,88L79.302,172L121.302,172L128.651,88ZM224.651,88L182.651,88L175.302,172L217.302,172L224.651,88ZM84,88L42,88L34.651,172L76.651,172L84,88ZM180,88L138,88L130.651,172L172.651,172L180,88ZM116.601,100L96.601,100L91.352,160L111.352,160L116.601,100ZM212.601,100L192.601,100L187.352,160L207.352,160L212.601,100ZM71.95,100L51.95,100L46.701,160L66.701,160L71.95,100ZM167.95,100L147.95,100L142.701,160L162.701,160L167.95,100Z"/>
+
+                            <g id="GROUP-Lines" serif:id="GROUP Lines">
+                                <g id="CenterLine">
+                                    <rect x="129" y="186" width="2" height="19" style="fill:rgb(0,255,170);" />
+                                </g>
+                                <path id="VerticalLine" d="M236,178L24,178L24,180L236,180L236,178ZM236,80L24,80L24,82L236,82L236,80Z" style="fill:rgb(0,255,170);" />
+                            </g>
+                            <g id="GROUP-TopBar" serif:id="GROUP TopBar">
+                                <path id="TopBar" d="M40,19L-0,19L0,74L68,74L72,70L72,51L40,19ZM220,19L260,19L260,74L192,74L188,70L188,51L220,19Z" style="fill:rgb(85,0,85);"/>
+                                <path id="TopBarText" d="M213,51L192,51L192,70L213,70L213,51ZM69,51L48,51L48,70L69,70L69,51Z" style="fill:rgb(255,255,85);"/>
+                                <rect id="SunTimeText" x="106" y="51" width="48" height="19" style="fill:rgb(0,66,91);"/>
+                                <rect id="SunOff" x="160" y="53" width="22" height="16" style="fill:rgb(147,0,0);"/>
+                                <rect id="SunOn" x="78" y="53" width="22" height="16" style="fill:rgb(147,66,0);"/>
+                            </g>
+                            <g id="GROUP-TopNotch" serif:id="GROUP TopNotch">
+                                <g id="TopNotchOutline" transform="matrix(1,0,0,1,-0.343781,2)">
+                                    <path d="M35.344,-2L225.344,-2L182.344,41L78.344,41L35.344,-2Z" style="fill:rgb(170,85,0);" />
+                                </g>
+                                <path id="TopNotch" d="M38,0L222,0L181,41L79,41L38,0Z" style="fill:rgb(255,170,0);" />
+                                <rect id="MonthDayText" x="141" y="12" width="31" height="24" />
+                                <g id="WeekDayText" transform="matrix(1.02128,0,0,1.04348,-1.85106,-1.56522)">
+                                    <rect x="87" y="13" width="47" height="23" />
+                                </g>
+                                <g id="SymbolDNDBackground" transform="matrix(1,0,0,0.692308,-1.13687e-13,0)">
+                                    <path d="M147,0L113,0L122,13L138,13L147,0Z"/>
+                                </g>
+                                <g id="SymbolDND" transform="matrix(0.714286,0,0,1,36.4286,1)">
+                                    <rect x="124" y="2" width="14" height="3" style="fill:white;"/>
+                                </g>
+                            </g>
+                            <path id="back-mask" serif:id="back mask" style="fill:#303030;" filter="url(#watchface_shadow)" d="M130,261L-1,261L-1,-1L261,-1L261,261L130,261C202.301,261 261,202.301 261,130C261,57.699 202.301,-1 130,-1C57.699,-1 -1,57.699 -1,130C-1,202.301 57.699,261 130,261Z"/>
+                            <script>
+                            function init(e)
+                            {
+                                onWatchFaceLoaded(e);
+                            }
+                            </script>
+                        </svg>
+                        <!-- END OF SVG WATCHFACE -->                    
+
+                    </div>
+                </td>
+                <td id="TD_Elements">
+                    <p id="ElementsTitle">Select element</p>
+                    <div id="Elements">
+                        <!-- selector injected here -->
+                    </div>
+                </td>
+                <td id="TD_Colors">
+                    <p id="ColorsTitle">Set color</p>
+                    <div id="Colors">
+                        <!-- color palette injected here -->
+                    </div>
+                </td>
+                </tr>
+
+                <!-- Second row -->
+                <tr>
+                    <td id="TD_SmallPreview" colspan="1">
+                        <canvas id="SmallPreviewCanvas" width="400" height="400"></canvas>
+                        <div id="SmallPreviewContainer">
+                            <div id="SmallPreviewPNG"></div>
+                            <div id="SmallPreviewInformation">
+                                <p>GENERATED PNG PREVIEW IMAGE</p>
+                                <p>May be copied or saved as png file.</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td id="TD_ThemeCode" colspan="2">
+                        <p id="P_ThemeCode">THEME CODE</p>
+                        <input id="ED_ThemeCode" type="text" size="56" style="text-transform:uppercase" placeholder="56 chars length">
+                        <div><button onclick="resetThemeCode()">RESET</button><button onclick="copyThemeCode()">COPY</button></div>
+                        <div class="how_to_block top_spacer_20">
+                            <h2>HOW TO APPLY THEME CODE TO WATCHFACE <a role="button" target="_self" href="howtoapply.html">READ</a></h2>
+                        </div>            
+                    </td>
+                </tr>
+
+                </tbody>
+                </table>        
+            </div>
+        </main>
+        <footer>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="links">
+                        </td>
+                        <td class="author">
+                            <p>COPYRIGHT © 2024 PIOTR ZAGAWA</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </footer>
+    </body>
+</html>
