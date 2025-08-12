@@ -1,8 +1,10 @@
 # FenixTrek Theme Designer
 
-### FenixTrek Theme Designer is a html/js based editor for color themes for FenixTrek Garmin watchface
+### FenixTrek Theme Designer is a html/js editor app for creating color themes
 
-Get packed zip from menu above (CODE button), unpack, then start with files: __designer.html__ or __themeslist.html__.
+It's companion tool for FenixTrek watchface for Garmin MIP watches.
+
+Get __packed zip__ from menu above (CODE button), unpack, then start with files: __designer.html__ or __themeslist.html__.
 
 There is also howtoapply.html help page, describing how to set generated theme to the watchface.
 
